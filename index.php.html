@@ -1,0 +1,590 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>RELIABLE ACCESS </title>
+  <meta name="description" content="Book your favorite celebrity with RELIABLE ACCESS  and also get free Meet and greet card">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Place favicon.ico in the root directory -->
+  <!-- <link
+      href="assets/images/favicon.ico"
+      type="img/x-icon"
+      rel="shortcut icon"
+    /> -->
+  <!-- All css files are included here. -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/iconfont.min.css">
+  <link rel="stylesheet" href="assets/css/plugins.css">
+  <link rel="stylesheet" href="assets/css/helper.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Modernizr JS -->
+  <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+  <!-- Icons Css -->
+  <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxRELIABLE ACCESSei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="aos%403.0.0-beta.6/dist/aos.css">
+
+  <!-- toastr -->
+  <script src="jquery-1.9.1.min.js"></script>
+  <link href="ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet">
+  <script src="ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+  <style>
+    .myCard:hover {
+      color: #fff;
+      background-color: #4bb543 !important;
+
+    }
+
+    .myCard {
+      padding: 10px 20px !important;
+    }
+
+    .card-details .holder-amount {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .card-details .date-package {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+
+    .card-desc {
+      margin-bottom: -6px !important;
+      font-size: 12px;
+      color: #ffd700;
+    }
+
+    .amount .two {
+      font-size: 25px;
+      color: #fff;
+    }
+
+    .holder--two {
+      letter-spacing: 2px;
+      color: #ccc;
+    }
+
+    .package--two,
+    .card-date--two {
+      color: #eee;
+    }
+
+    @media (min-width: 768px) {
+
+      .newCard .col-md-6 {
+        width: 80% !important;
+      }
+    }
+  </style>
+
+
+
+  <!-- Smartsupp Live Chat script -->
+  <!-- <script type="text/javascript">
+    var _smartsupp = _smartsupp || {};
+    _smartsupp.key = '4e98b78343471f909e963b9b70a736fe386580f7';
+    window.smartsupp || (function (d) {
+      var s, c, o = smartsupp = function () { o._.push(arguments) }; o._ = [];
+      s = d.getElementsByTagName('script')[0]; c = d.createElement('script');
+      c.type = 'text/javascript'; c.charset = 'utf-8'; c.async = true;
+      c.src = 'https://www.smartsuppchat.com/loader.js?'; s.parentNode.insertBefore(c, s);
+    })(document);
+  </script>
+  <noscript> Powered by <a href="“https://www.smartsupp.com”" target="“_blank”">Smartsupp</a></noscript>
+ --> 
+
+ <style>
+        .mgm {
+            border-radius: 7px;
+            position: fixed;
+            z-index: 90;
+            background: #fff;
+            padding: 10px 27px;
+            box-shadow: 0px 5px 13px 0px rgba(0, 0, 0, .3);
+            display: none;
+        }
+
+        .mgm a {
+            font-weight: 700;
+            display: block;
+            color: #8BC34A;
+        }
+
+        .mgm a,
+        .mgm a:active {
+            transition: all .2s ease;
+            color: #8BC34A;
+        }
+    </style>
+
+     <!-- popup script -->
+
+     <script type="text/javascript">
+        var listCountries = ['South Africa', 'USA', 'Germany', 'France', 'Italy', 'South Africa', 'Australia', 'South Africa', 'Canada', 'Argentina', 'Saudi Arabia', 'Mexico', 'South Africa', 'South Africa', 'Venezuela', 'South Africa', 'Sweden', 'South Africa', 'South Africa', 'Italy', 'South Africa', 'United States of America', 'South Africa', 'Greece', 'Cuba', 'South Africa', 'Portugal', 'Austria', 'South Africa', 'Panama', 'South Africa', 'South Africa', 'Netherlands', 'Switzerland', 'Belgium', 'Israel', 'Cyprus'];
+        var listPlans = ['$15,467.66', '$10,220.12', '$51,120.05', '$40,100.33', '$12,400.15', '$7,000.23', '$9,014.33', '$26,450.23', '$79,300.45', '$29,500.23'];
+        var transarray = ['just <b>invested</b>', 'has <b>withdrawn</b>', 'is <b>trading with</b>'];
+
+        function createPopup(country, transtype, plan) {
+            var popup = $('<div class="mgm"><div class="txt" style="color:black;"></div></div>');
+            var msg = 'Someone from <b>' + country + '</b> ' + transtype + ' <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + '</a>';
+            popup.find('.txt').html(msg);
+            $('body').append(popup);
+
+            popup.fadeIn(300, function() {
+                setTimeout(function() {
+                    popup.fadeOut(300, function() {
+                        popup.remove();
+                    });
+                }, 10000);
+            });
+        }
+
+        function request() {
+            var country = listCountries[Math.floor(Math.random() * listCountries.length)];
+            var transtype = transarray[Math.floor(Math.random() * transarray.length)];
+            var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
+            
+            createPopup(country, transtype, plan);
+
+            var interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
+            setTimeout(request, interval);
+        }
+
+        $(document).ready(function() {
+            request();
+        });
+    </script>
+
+
+    <!-- popup script end -->
+
+
+</head>
+
+<body>
+<div id="main-wrapper">
+  <!--Header section start-->
+  <header class="header header-sticky">
+  <div class="header-bottom menu-center">
+    <div class="container">
+      <div class="row justify-content-between">
+        <!--Logo start-->
+        <div class="col mt-10 mb-10">
+          <div class="logo">
+            <a href="index.php.html"><img src="assets/images/logo.png" alt=""></a>
+          </div>
+        </div>
+        <!--Logo end-->
+        
+
+
+
+        <!--Menu start-->
+        <div class="col d-none d-lg-flex">
+          <nav class="main-menu">
+            <ul>
+              <li>
+                <a href="index.php.html">Home</a>
+              </li>
+
+              <li>
+                <a href="index.php.html">About </a>
+              </li>
+
+              <li>
+                <a href="booking.php.html">Cards </a>
+              </li>
+
+              <li>
+                <a href="contact.php.html">Contact </a>
+              </li>
+
+            </ul>
+          </nav>
+        </div>
+        <!--Menu end-->
+
+        <!--User start-->
+        <div class="col mr-sm-50 mr-xs-50">
+          <!-- <div class="header-user">
+            <a href="booking.php.html" class="user-toggle"><i class="fa-regular fa-credit-card fa-2xs"></i><span><button class="btn rounded" style="padding: 5px 15px;">View
+                  Card</button></span></a>
+          </div> -->
+        </div>
+        <!--User end-->
+      </div>
+
+      <!--Mobile Menu start-->
+      <div class="row">
+        <div class="col-12 d-flex d-lg-none">
+          <div class="mobile-menu"></div>
+        </div>
+      </div>
+      <!--Mobile Menu end-->
+    </div>
+  </div>
+</header>  <!--Header section end-->
+
+  <!--slider section start-->
+  <div class="hero-slider section">
+
+    <!--Hero Item start-->
+    <div class="hero-item" style="background-image: url(assets/images/bg/nature.jpg)">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+
+            <!--Hero Content start-->
+            <div class="hero-property-content text-center">
+              <h1 class="title " style="margin-top: 60px;"><a href="#">RELIABLE ACCESS  </a> </h1>
+            </div>
+            <!--Hero Content end-->
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Hero Item end-->
+
+
+
+  </div>
+  <!--slider section end-->
+
+
+
+
+  <!--Welcome Lagacy -  section-->
+  <div class="feature-section feature-section-border-top section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10">
+    <div class="container">
+      <div class="row row-25 align-items-center">
+
+        <!--Feature Image start-->
+        <div class="col-lg-5 col-12 order-1 order-lg-2 mb-40">
+
+          <div class="feature-image"><img src="assets/images/bg/sunrises.jpg" style="border-radius: 10px;" alt="">
+          </div>
+
+        </div>
+        <!--Feature Image end-->
+
+        <div class="col-lg-7 col-12 order-2 order-lg-1 mb-40">
+          <div data-aos="fade-up" data-aos-duration="3000">
+
+            <div class="row">
+              <div class="col">
+                <div class="about-content">
+                  <h3>Welcome to <span>RELIABLE ACCESS</span></h3>
+                  <h1>We Always Provide Priority to Our Customer</h1>
+                  <p>RELIABLE ACCESS  - managing your favorite celebrity, all booking request with your desired
+                    celebrity has been made easy and not to mention our exclusive meet and greet card and amazing
+                    services
+                    to keep you connected to the world.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--Welcome Lagacy -  section end-->
+
+  <!--New property section start-->
+  <div class="property-section section bg-gray pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10">
+    <div class="container">
+      <!--Section Title start-->
+      <div class="row">
+        <div class="col-md-12 mb-60 mb-xs-30">
+          <div class="section-title center">
+            <h1>Apply for Meet and Greet</h1>
+          </div>
+        </div>
+      </div>
+      <!--Section Title end-->
+
+      <div class="row row-25 align-items-center">
+
+        <!--Feature Image start-->
+        <div class="col-lg-5 col-12 order-1 order-lg-1 mb-40">
+          <div class="feature-image"><img src="assets/images/others/card.png" width="405px" height="252px" alt=""></div>
+        </div>
+        <!--Feature Image end-->
+
+        <div class="col-lg-7 col-12 order-2 order-lg-2 mb-40">
+
+          <div class="row">
+            <div class="col">
+              <div class="about-content">
+
+                <h1>Our Best Offer</h1>
+                <p>Have you been looking to get easy access to your favorite celerity? Look no further, with our
+                  <span style="color: #004395;"><b>Meet and Greet</b></span> you can get your favorite celebrity with
+                  ease, plus
+                  access to certain
+                  event, services and private meetings.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 50px; text-align: center ;">
+            <a href="booking.php.html">
+              <button class="btn btn-primary btn-lg rounded">Request Card</button>
+            </a>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+  <!--New property section end-->
+
+  <!--News Section start-->
+  <div class="news-section section pb-100 pb-lg-80 pb-md-70 pb-sm-60 pb-xs-50">
+    <div class="container">
+      <!--Section Title start-->
+      <div class="row">
+        <div class="col-md-12 mb-60 mb-xs-30">
+          <div class="section-title center">
+            <h1>Our Services</h1>
+          </div>
+        </div>
+      </div>
+      <!--Section Title end-->
+
+      <div class="row">
+        <div class="news-carousel section slider-space-30">
+          <!--News start-->
+          <div class="col">
+            <div class="news">
+              <div class="image">
+                <a href="booking.php.html"><img src="assets/images/news/news-1.jpg" alt=""></a>
+
+              </div>
+              <div class="content">
+                <h4 class="title">
+                  <a href="booking.php.html">Book Appointment</a>
+                </h4>
+                <div class="desc">
+                  <p style="font-size: 15px;">
+                    Send your appointment booking request to us including the type of appointment, date, time and any
+                    specific prefrences or requirements you have. We got you covered.
+                  </p>
+                </div>
+                <a href="booking.php.html"><button class="btn rounded">Book Now</button></a>
+              </div>
+            </div>
+          </div>
+          <!--News end-->
+
+          <!--News start-->
+          <div class="col">
+            <div class="news">
+              <div class="image">
+                <a href="booking.php.html"><img src="assets/images/news/news-2.jpg" alt=""></a>
+
+              </div>
+              <div class="content">
+                <h4 class="title">
+                  <a href="booking.php.html">Schedule Vacation</a>
+                </h4>
+                <div class="desc">
+                  <p style="font-size: 15px;">
+                    Escape to paradise with our exclusive vacation packages with a seamless blend of relaxation and
+                    excitement. Your dream vacation awaits!
+                  </p>
+                </div>
+                <a href="booking.php.html"><button class="btn rounded">Schedule Now</button></a>
+              </div>
+            </div>
+          </div>
+          <!--News end-->
+
+          <!--News start-->
+          <div class="col">
+            <div class="news">
+              <div class="image">
+                <a href="booking.php.html"><img src="assets/images/news/news-3.jpg" alt=""></a>
+
+              </div>
+              <div class="content">
+                <h4 class="title">
+                  <a href="booking.php.html">Device Configuration</a>
+                </h4>
+                <div class="desc">
+                  <p style="font-size: 15px;">
+                    Enable video calls and 24 hours voice calls has become easy with RELIABLE ACCESS 
+                  </p>
+                </div>
+                <a href="booking.php.html"><button class="btn rounded">Get in Touch</button></a>
+              </div>
+            </div>
+          </div>
+          <!--News end-->
+
+
+
+          <!--News start-->
+          <div class="col">
+            <div class="news">
+              <div class="image">
+                <a href="booking.php.html"><img src="assets/images/news/news-4.png" alt=""></a>
+
+              </div>
+              <div class="content">
+                <h4 class="title">
+                  <a href="booking.php.html">Report Fake Page</a>
+                </h4>
+                <div class="desc">
+                  <p>
+                    Please feel free to report any fake page or website asking for personal information in disguise as
+                    us. We would be glad to help swiftly.
+                  </p>
+                </div>
+                <a href="booking.php.html"><button class="btn rounded">Report Now</button></a>
+              </div>
+            </div>
+          </div>
+          <!--News end-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--News Section end-->
+
+  <!--Footer section start-->
+  
+<footer class="footer-section section" style="background-image: url(assets/images/bg/footer-bg.jpg)">
+  <!--Footer Top start-->
+  <div class="footer-top section pt-100 pt-lg-80 pt-md-70 pt-sm-60 pt-xs-50 pb-60 pb-lg-40 pb-md-30 pb-sm-20 pb-xs-10">
+    <div class="container">
+      <div class="row row-25">
+        <!--Footer Widget start-->
+        <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
+          <img src="assets/images/logo-footer.png" alt="">
+          <p>
+            Book your favorite celebrity with RELIABLE ACCESS  and also get free Meet and greet card
+          </p>
+
+        </div>
+        <!--Footer Widget end-->
+
+        
+        <!--Footer Widget start-->
+        <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
+          <h4 class="title">
+            <span class="text">Contact us</span><span class="shape"></span>
+          </h4>
+          <ul>
+            <li>
+              <i class="fa fa-map-o"></i><span>
+                1400 S Alameda St, Los Angeles, CA              </span>
+            </li>
+            <li>
+              <i class="fa fa-phone"></i><span><a href="#">
+                  +1 419-777-6270                </a></span>
+            </li>
+            <li>
+              <i class="fa fa-envelope-o"></i><span><a href="#">
+                  managementteam343@gmail.com                </a></span>
+            </li>
+          </ul>
+        </div>
+        <!--Footer Widget end-->
+
+        <!--Footer Widget start-->
+        <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
+
+        </div>
+        <!--Footer Widget end-->
+
+        <!--Footer Widget start-->
+        <div class="footer-widget col-lg-3 col-md-6 col-12 mb-40">
+          <h4 class="title">
+            <span class="text">Newsletter</span><span class="shape"></span>
+          </h4>
+
+          <p>
+            Subscribe our newsletter and get all latest news about your favorite celebrity
+          </p>
+
+          <form id="mc-form" class="mc-form footer-newsletter">
+            <input id="mc-email" type="email" autocomplete="off" placeholder="Email Here..">
+            <button id="mc-submit">
+              <i class="fa fa-paper-plane-o"></i>
+            </button>
+          </form>
+          <!-- mailchimp-alerts Start -->
+          <div class="mailchimp-alerts text-centre">
+            <div class="mailchimp-submitting"></div>
+            <!-- mailchimp-submitting end -->
+            <div class="mailchimp-success"></div>
+            <!-- mailchimp-success end -->
+            <div class="mailchimp-error"></div>
+            <!-- mailchimp-error end -->
+          </div>
+          <!-- mailchimp-alerts end -->
+        </div>
+        <!--Footer Widget end-->
+      </div>
+    </div>
+  </div>
+  <!--Footer Top end-->
+
+  <!--Footer bottom start-->
+  <div class="footer-bottom section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="copyright text-center">
+            <p>
+              Copyright &copy;2023 <a href="#">RELIABLE ACCESS </a>. All rights
+              reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer bottom end-->
+</footer>  <!--Footer section end-->
+</div>
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+<!-- All jquery file included here -->
+<script src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry&v=3.22&key=AIzaSyDAq7MrCR1A2qIShmjbtRELIABLE ACCESSSKjcEIEBEEwM"></script>
+<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="assets/js/vendor/jquery-migrate-1.4.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/plugins.js"></script>
+<script src="assets/js/map-place.js"></script>
+<script src="assets/js/main.js"></script>
+
+<!-- materialdesign icon js-->
+<script src="assets/js/pages/materialdesign.init.js"></script>
+
+<!-- AOS -->
+<script src="aos%403.0.0-beta.6/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+
+</html>
